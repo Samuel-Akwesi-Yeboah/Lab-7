@@ -30,7 +30,7 @@ int main() {
     inFile >> s;
     while (inFile) {;
         bst.insertItem(s);
-         cout << "inserting ... " << s  << endl;
+        //cout << "inserting ... " << s  << endl;
         inFile >> s;
     }
 
@@ -48,21 +48,18 @@ int main() {
     print(bst.inOrderTraversal());
     cout << endl;
 
-    if(bst.isItemInTree("0")){
-        cout << "The item was found";
-    }
-    else{
-        cout << "The item was not found\n";
-    }
     cout << "Remove items " << endl;
     cout << "number of nodes in tree before delete is " << bst.countNodes() << endl;
     s = "tree";
     bst.deleteItem(s);
+    cout << "number of nodes in tree after delete is " << bst.countNodes() << endl;
+    cout << endl;
+
     bst.makeEmpty();
     print(bst.postOrderTraversal());
-//    cout << endl;
-//    cout << "number of nodes in tree after delete is " << bst.countNodes() << endl;
-//    cout << endl;
+    cout << endl;
+    cout << "number of nodes in tree after delete is " << bst.countNodes() << endl;
+    cout << endl;
 
 }
 
